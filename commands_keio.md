@@ -161,8 +161,26 @@ miRDeep2.pl reads_collapsed.fa ~/final/hypsibius-georgios-extended-filtered.fast
 ```{HGT.sh}
 wget -R ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/taxonomic_divisions/
 
+# Extract entries with KEYWORD="Complete proteome" for each division and merge SwissProt and TrEMBL
+for i in *dat.gz; do; gunzip $i; echo uniprot_sprot_archaea.dat | perl -slane '$a=(split /\_/, $_)[2]; $a=~/(\w+).dat/; $b=$1; print "perl screen_complete_proteome_from_uniprot_division.pl \$i >> uniprot_".$b.".fasta"' -- -i=$i; done;
+diamond makedb ***
 
 
+diamond blastx --threads 30 --db uniprot_archaea.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_archaea.fa.diamond.out --sensitive
+diamond blastx --threads 30 --db uniprot_bacteria.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_bacteria.fa.diamond.out --sensitive
+diamond blastx --threads 30 --db uniprot_fungi.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_fungi.fa.diamond.out --sensitive
+diamond blastx --threads 30 --db uniprot_human.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_human.fa.diamond.out --sensitive
+diamond blastx --threads 30 --db uniprot_mammals.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_mammals.fa.diamond.out --sensitive
+diamond blastx --threads 30 --db uniprot_plants.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_plants.fa.diamond.out --sensitive
+diamond blastx --threads 30 --db uniprot_rodents.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_rodents.fa.diamond.out --sensitive
+diamond blastx --threads 30 --db uniprot_vertebrates.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_vertebrates.fa.diamond.out --sensitive
+diamond blastx --threads 30 --db uniprot_viruses.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_viruses.fa.diamond.out --sensitive
+diamond blastx --threads 30 --db uniprot_invertebrates.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_invertebrates.fa.diamond.out --sensitive
+
+## For nematode clade orgasnims
+#diamond blastx --threads 30 --db uniprot_invertebrates.fa.ids.nonNematoda.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_invertebrates.fa.diamond.out --sensitive
+## For arthropod clade organisms
+#diamond blastx --threads 30 --db uniprot_invertebrates.fa.ids.nonArthropoda.fa.dmnd --query $CDSSEQ -e 10 -a uniprot_invertebrates.fa.diamond.out --sensitive
 
 ```
 
