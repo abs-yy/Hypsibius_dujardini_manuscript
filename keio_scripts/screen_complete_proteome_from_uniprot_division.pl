@@ -18,6 +18,9 @@ sub get_fasta{
 
   foreach my $entry ( sort keys %{$tree} ) {
     if( defined $tree->{$entry}->{KW} && $tree->{$entry}->{KW} =~ /Complete\sproteome/ ) {
+      next if $tree->{$entry}->{OC} =~ /Tardigrada/ ;
+#      next if $tree->{$entry}->{OC} =~ /Nematoda/ ;
+#      next if $tree->{$entry}->{OC} =~ /Arthropoda/ ;
       my %fasta;
       my $seq = $tree->{$entry}->{"  "};
       $seq =~ s/\s+//g;
