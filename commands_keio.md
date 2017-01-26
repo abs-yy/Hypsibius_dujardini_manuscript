@@ -157,7 +157,14 @@ hmmsearch --cpu 30 --domE 1e-3 --domtblout $CDSSEQ.hmmsearch.Dfam.1e-3 /path/to/
 miRDeep2.pl reads_collapsed.fa ~/final/hypsibius-georgios-extended-filtered.fasta reads_collapsed_vs_genome.arf none /path/to/miRdeep/mature.fa none
 ```
 
+5. HGT index based HGT candidate identification
+```{HGT.sh}
+wget -R ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/taxonomic_divisions/
 
+
+
+
+```
 
 
 
