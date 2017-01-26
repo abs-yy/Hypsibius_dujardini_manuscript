@@ -2,7 +2,6 @@
 ```
 GENOME=nHd3.0.fsa
 ```
-
 1. Genome validation
 ```{genome_validation.sh}
 # DNA-Seq mapping
@@ -19,6 +18,10 @@ bin/qualimap_v2.2/qualimap bamqc -bam $DNASEQ.mem.sorted.bam -outformat pdf --ja
 
 # CEGMA
 cegma -g $GENOME -T 30
+
+# Pilon polishing
+bwa index $GENOME
+java -Xmx200g -jar ~/bin/pilon-1.17.jar --genome $GENOME --frags $DNASEQ.mem.sorted --output $GENOME --changes --vcf
 
 ```
 
