@@ -185,6 +185,15 @@ diamond blastx --threads 30 --db uniprot_invertebrates.fa.dmnd --query $CDSSEQ -
 ```
 
 
+6. Gene expression analysis
+```{gene_expression.sh}
+# Kallisto quantification
+kallisto index -i $CDSSEQ.kallisto $CDSSEQ
+cd /path/to/rnaseq/fastq/files/
+for i in H-active_10k-1 H-active_10k-2 H-active_10k-3 H-tun_10k-1 H-tun_10k-2 H-tun_10k-3; do; echo $i; kallisto quant -i $CDSSEQ.kallisto -o $i.kallisto --bias -b 100 -t 32 $i-R1.fq.gz $i-R2.fq.gz; done;
+for i in H-B* H-E* H-*30* ; do; echo $i; kallisto quant -i $CDSSEQ.kallisto -o $i.kallisto --bias -b 100 --single -l 200 -s 50 -t 32 $i; done;
 
+
+```
 
 
