@@ -9,9 +9,6 @@ use G;
 my $input = shift;
 my %out = &get_fasta($input);
 
-say to_fasta(%out);
-
-
 sub get_fasta{
   my $input = $_[0];
   my $tree = readFile($input, -format=>"swiss" );
@@ -26,7 +23,7 @@ sub get_fasta{
       $seq =~ s/\s+//g;
       say $tree->{$entry}->{LOCUS}->{id}."|".$dat."|".$div if $tree->{$entry}->{OC} =~ /Metazoa/;
       $fasta{$tree->{$entry}->{LOCUS}->{id}."|".$dat."|".$div} = $seq;
+      say to_fasta(%fasta);
     }
   }
-  return %fasta;
 }
