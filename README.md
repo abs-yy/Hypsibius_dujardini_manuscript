@@ -1,1 +1,1 @@
-# Hypsibius_dujardini_manuscript
+# Github repository for Hypsibius dujardini genome manuscript
