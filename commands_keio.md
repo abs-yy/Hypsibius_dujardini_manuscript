@@ -196,9 +196,7 @@ for i in H-B* H-E* H-*30* ; do; echo $i; kallisto quant -i $CDSSEQ.kallisto -o $
 perl parse_kallisto_from_dir.pl . >> kallisto_merged.txt
 perl parse_count_from_dir.pl . >> bwa_count_merged.txt
 
-
-
-
+Rscript run_DESeq2_on_bwa_count_matrix.R bwa_count_merged.txt
 ```
 
 
