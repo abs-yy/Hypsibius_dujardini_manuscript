@@ -1,0 +1,30 @@
+Category	General	Organism	Ensembl	Ab initio	This work	Other
+Arthropod	mosquito	Aedes aegypti	1.53	9.03	NA	NA
+Arthropod	bee	Apis mellifera	4.96	8.9	NA	NA
+Arthropod	bee	Bombus impatiens	10.29	13.63	NA	NA
+Arthropod	mosquito	Culex quinquefasciatus	1.45	2.17	NA	NA
+Arthropod	Daphnia	Daphnia magna		NA	NA	7.79
+Arthropod	fly	Drosophila ananassae	0.88	11.58	NA	NA
+Arthropod	fly	Drosopohila erecta	0.84	5.36	NA	NA
+Arthropod	fly	Drosophila grimshawi	0.86	2.39	NA	NA
+Arthropod	fly	Drosophila melanogaster	0.73	4.67	NA	NA
+Arthropod	fly	Drosophila mojavensis	0.87	3.28	NA	NA
+Arthropod	fly	Drosophila persimilis	0.76	5.46	NA	NA
+Arthropod	fly	Drosophila pseudoobscura	0.9	2.21	NA	NA
+Arthropod	fly	Drosophila sechellia	0.66	6.86	NA	NA
+Arthropod	fly	Drosophila simulans	0.71	3.18	NA	NA
+Arthropod	fly	Drosophila virilis	0.81	4.32	NA	NA
+Arthropod	fly	Drosophila willistoni	1.47	6.02	NA	NA
+Arthropod	fly	Drosophila yakuba	0.81	4.32	NA	NA
+Arthropod	butterfly	Heliconius melpomene	1.4	1.97	NA	NA
+Arthropod	wasp	Nasonia vitripennis	1.92	3.48	NA	NA
+Arthropod	bug	Rhodnius prolixus	4.63	4.68	NA	NA
+Arthropod	beetle	Tribolium castaneum	1.12	1	NA	NA
+Nematode	nematode	Caenorhabditis brenneri	1.7	2.99	NA	NA
+Nematode	nematode	Caenorhabditis briggsae	2.19	2.13	NA	NA
+Nematode	nematode	Caenorhabditis elegans	2.11	2.09	NA	NA
+Nematode	nematode	Caenorhabditis japonica	2.06	2.22	NA	NA
+Nematode	nematode	Caenorhabditis remanei	5.29	9.01	NA	NA
+Nematode	nematode	Trichinella spiralis	0.55	0.51	NA	NA
+Tardigrade	tardigrade	Hypsibius dujardini	NA	3.67	1.33	NA
+Tardigrade	tardigrade	Ramazzottius varieornatus	NA	2.25	2.22	NA
