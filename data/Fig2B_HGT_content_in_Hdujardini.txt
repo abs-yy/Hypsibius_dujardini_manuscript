@@ -2,6 +2,6 @@ Category	Expression_and_Conservation	Conservation_only	Expression_only	Neither_e
 prokaryote	63	9	97	32
 non metazoan	49	14	42	22
 virus	4	0	0	0
-complex_hgts	17	8	5	8
+complex hgts	17	8	5	8
 complex	35	13	20	13
 metazoan	0	2	6	4
