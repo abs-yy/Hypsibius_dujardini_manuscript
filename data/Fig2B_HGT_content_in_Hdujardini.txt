@@ -1,7 +1,0 @@
-Category	Expression_and_Conservation	Conservation_only	Expression_only	Neither_expression_nor_conservation	Likelihood
-Prokaryote	63	9	97	32	Higher likelihood
-Non metazoan	49	14	42	22	Higher likelihood
-Virus	4	0	0	0	Higher likelihood
-Complex HGTs	17	8	5	8	Higher likelihood
-Complex	35	13	20	13	Lower likelihood
-Metazoan	0	2	6	4	Lower likelihood
